@@ -40,7 +40,7 @@ public class CustomerConroller implements Initializable {
         System.out.println(txtCusAddress.getText());
         try {
             Connection con = DBConnection.getInstance().getConnection();
-            PreparedStatement stm = con.prepareStatement("INSERT INTO customer VALUES(?,?,?,?,?,?,?)");
+            PreparedStatement stm = con.prepareStatement("INSERT INTO customer VALUES(?,?,?,?)");
             stm.setString(1, cust.getName());
             stm.setString(2, cust.getAddress());
             stm.setString(3, cust.getTelephone());
