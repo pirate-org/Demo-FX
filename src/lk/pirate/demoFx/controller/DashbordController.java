@@ -28,8 +28,23 @@ public class DashbordController {
     private BorderPane main;
 
     @FXML
+    private Button btnItem;
+    @FXML
     void navigateToCustomer(ActionEvent event) {
 
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/lk/pirate/demoFx/view/Customer.fxml")));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        main.setCenter(root);
+    }
+
+
+    @FXML
+    void navigateToItem(ActionEvent event) {
         Parent root = null;
         try {
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/lk/pirate/demoFx/view/Customer.fxml")));
