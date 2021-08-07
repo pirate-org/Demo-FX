@@ -36,6 +36,7 @@ public class CustomerConroller implements Initializable {
 
     @FXML
     void btnSave(ActionEvent event) {
+
         Customer cust=new Customer(txtCusName.getText(),txtCusAddress.getText(),txtCusTel.getText(),txtCusDOB.getText());
         try {
             Connection con = DBConnection.getInstance().getConnection();
