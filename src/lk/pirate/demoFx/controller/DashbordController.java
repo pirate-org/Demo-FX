@@ -42,7 +42,6 @@ public class DashbordController {
         main.setCenter(root);
     }
 
-
     @FXML
     void navigateToItem(ActionEvent event) {
         Parent root = null;
