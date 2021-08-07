@@ -17,10 +17,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
 
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().
-                    getResource("/lk/pirate/demoFX/view/dashbord.fxml")));
-
-            primaryStage.setScene(new Scene(root));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/lk/pirate/demoFX/view/dashbord.fxml")));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            //primaryStage.initStyle(StageStyle.TRANSPARENT);
+            //primaryStage.setFullScreen(true);
             primaryStage.show();
         } catch (Exception e) {
             System.out.println(e);
